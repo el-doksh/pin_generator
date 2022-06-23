@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GenerateCodeController@index')->name('home');
+Route::post('get_code', 'GenerateCodeController@get_code')->name('get_code.index');
